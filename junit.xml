@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="0" errors="0" time="1.28">
+  <testsuite name="ToDoList main.js functions" errors="0" failures="0" skipped="0" timestamp="2025-05-22T08:26:05" time="0.688" tests="8">
+    <testcase classname="ToDoList main.js functions savelocal adds todo to localStorage" name="ToDoList main.js functions savelocal adds todo to localStorage" time="0.024">
+    </testcase>
+    <testcase classname="ToDoList main.js functions removeLocalTodos removes todo from localStorage" name="ToDoList main.js functions removeLocalTodos removes todo from localStorage" time="0.006">
+    </testcase>
+    <testcase classname="ToDoList main.js functions changeTheme sets theme and updates DOM" name="ToDoList main.js functions changeTheme sets theme and updates DOM" time="0.007">
+    </testcase>
+    <testcase classname="ToDoList main.js functions addToDo does not add empty todo and calls alert" name="ToDoList main.js functions addToDo does not add empty todo and calls alert" time="0.007">
+    </testcase>
+    <testcase classname="ToDoList main.js functions addToDo adds todo to DOM and localStorage" name="ToDoList main.js functions addToDo adds todo to DOM and localStorage" time="0.007">
+    </testcase>
+    <testcase classname="ToDoList main.js functions getTodos populates the DOM from localStorage" name="ToDoList main.js functions getTodos populates the DOM from localStorage" time="0.004">
+    </testcase>
+    <testcase classname="ToDoList main.js functions deletecheck removes todo from DOM and localStorage" name="ToDoList main.js functions deletecheck removes todo from DOM and localStorage" time="0.004">
+    </testcase>
+    <testcase classname="ToDoList main.js functions deletecheck toggles completed class on check-btn" name="ToDoList main.js functions deletecheck toggles completed class on check-btn" time="0.006">
+    </testcase>
+  </testsuite>
+</testsuites>
