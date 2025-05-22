@@ -251,5 +251,3 @@ describe('ToDoList main.js functions', () => {
     expect(todoDiv.classList.contains('completed')).toBe(false);
   });
 });
-
-// We recommend installing an extension to run jest tests.
