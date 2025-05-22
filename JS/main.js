@@ -38,8 +38,8 @@ function addToDo(event) {
             alert("You must write something!");
         } 
     else {
-        // newToDo.innerText = "hey";
-        newToDo.innerText = toDoInput.value;
+        newToDo.innerText = "hey";
+        // newToDo.innerText = toDoInput.value;
         newToDo.classList.add('todo-item');
         toDoDiv.appendChild(newToDo);
 
