@@ -193,6 +193,53 @@ form input.darker-input:hover {
     background-color: #013141;
 }
 
+/* Select themes */
+select.standard-input {
+    background-color: #181a1a;
+    color: rgb(247, 226, 223);
+    border: 1px solid #444;
+}
+
+select.standard-input:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+select.light-input {
+    background-color: #AEB1B4;
+    color: #1a150e;
+    border: 1px solid #888;
+}
+
+select.light-input:hover {
+    background-color: #919699;
+}
+
+select.darker-input {
+    background-color: #01394c;
+    color: white;
+    border: 1px solid #025a7a;
+}
+
+select.darker-input:hover {
+    background-color: #013141;
+}
+
+/* Style select options dropdown */
+select.standard-input option {
+    background-color: #181a1a;
+    color: rgb(247, 226, 223);
+}
+
+select.light-input option {
+    background-color: #AEB1B4;
+    color: #1a150e;
+}
+
+select.darker-input option {
+    background-color: #01394c;
+    color: white;
+}
+
 button {
     border: none;
     outline: none; 
@@ -376,4 +423,262 @@ form button {
     form > button.light-button {
         box-shadow: 0 0 5px lightgray;
     }
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.priority-select,
+.due-date-input,
+.category-input {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.priority-select {
+    min-width: 120px;
+}
+
+.due-date-input {
+    min-width: 150px;
+}
+
+.category-input {
+    min-width: 120px;
+    flex-grow: 1;
+}
+
+/* Filter Controls */
+#filter-controls {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#filter-controls.standard {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#filter-controls.light {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#filter-controls.darker {
+    background: rgba(0, 20, 30, 0.5);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Filter labels theme adaptation */
+.standard .filter-group label {
+    color: #ffdfdb;
+}
+
+.light .filter-group label {
+    color: #1a150e;
+}
+
+.darker .filter-group label {
+    color: white;
+}
+
+.filter-group select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+}
+
+/* Todo Item Enhancements */
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.priority-indicator {
+    font-size: 18px;
+    min-width: 25px;
+    text-align: center;
+}
+
+.todo-item {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 500;
+}
+
+.todo-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.category-tag {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.due-date-tag {
+    background: #fff3e0;
+    color: #f57c00;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.due-date-tag.overdue-tag {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.todo-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Priority Styles */
+.priority-high {
+    color: #d32f2f;
+}
+
+.priority-medium {
+    color: #f57c00;
+}
+
+.priority-low {
+    color: #388e3c;
+}
+
+/* Overdue Styling */
+.todo.overdue {
+    border-left: 4px solid #d32f2f;
+    background: #ffebee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .priority-select,
+    .due-date-input,
+    .category-input {
+        width: 100%;
+    }
+    
+    #filter-controls {
+        flex-direction: column;
+    }
+    
+    .todo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .todo-metadata {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Theme Variations */
+.light .todo {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.darker .todo {
+    background: #2c2c2c;
+    color: #fff;
+}
+
+.standard .todo-metadata .category-tag {
+    background: rgba(255, 223, 219, 0.2);
+    color: #ffdfdb;
+}
+
+.standard .todo-metadata .due-date-tag {
+    background: rgba(255, 223, 219, 0.2);
+    color: #ffdfdb;
+}
+
+.light .todo-metadata .category-tag {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.light .todo-metadata .due-date-tag {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.darker .todo-metadata .category-tag {
+    background: rgba(21, 101, 192, 0.3);
+    color: #bbdefb;
+}
+
+.darker .todo-metadata .due-date-tag {
+    background: rgba(239, 108, 0, 0.3);
+    color: #ffe0b2;
+}
+
+.darker .category-tag {
+    background: #1565c0;
+    color: #bbdefb;
+}
+
+.darker .due-date-tag {
+    background: #ef6c00;
+    color: #ffe0b2;
+}
+
+.darker .due-date-tag.overdue-tag {
+    background: #c62828;
+    color: #ffcdd2;
 }
